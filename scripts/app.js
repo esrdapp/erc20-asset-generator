@@ -1,9 +1,7 @@
 var web3,
     provider,
     isMainNetwork,
-    isRopsten,
-    isRinkeby,
-    isGoerli,
+    isHpb,
     isMetaMaskLocked,
     address;
 
@@ -475,7 +473,7 @@ window.addEventListener('load', async () => {
     // No web3 provider
     else {
         console.log('No web3 provider detected || web3 not exits');
-        metamaskStatus.html('You do not appear to be connected to any Ethereum network. To use this service and deploy your contract, we recommend using the <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en">MetaMask</a> plugin for Google Chrome, which allows your web browser to connect to an Ethereum network.').show();
+        metamaskStatus.html('You do not appear to be connected to the HPB network. To use this service and deploy your contract, we recommend using the <a href="https://chrome.google.com/webstore/detail/metamask/nkbihfbeogaeaoehlefnkodbefgpgknn?hl=en">MetaMask</a> plugin for Google Chrome, which allows your web browser to connect to the HPB network.').show();
     }
 });
 
@@ -515,15 +513,9 @@ function start() {
             if (networkId === '1') {
                 isMainNetwork = true;
                 currentNetwork.text('You are currently at Mainnet').show();
-            } else if (networkId === '3') {
-                isRopsten = true;
-                currentNetwork.text('Your are currently at Ropsten testnet.').show();
-            } else if (networkId === '4') {
-                isRinkeby = true;
-                currentNetwork.text('Your are currently at Rinkeby testnet.').show();
-            } else if (networkId === '5') {
-                isGoerli = true;
-                currentNetwork.text('Your are currently at Goerli testnet.').show();
+            } else if (networkId === '269') {
+                isHpb = true;
+                currentNetwork.text('Your are currently at HPB Network.').show();
             } else
                 currentNetwork.text('Your current network id is ' + networkId).show();
         })
@@ -558,7 +550,7 @@ function start() {
                 }
             })
             .then(function (balance) {
-                accountAddress.html('<strong>Selected Account: ' + address + ' (' + balance + ' eth)</strong>').show();
+                accountAddress.html('<strong>Selected Account: ' + address + ' (' + balance + ' hpb)</strong>').show();
             })
             .fail(function (err) {
                 if (err.message !== "Metamask Locked")
@@ -688,12 +680,8 @@ assetForm.submit(function (e) {
             var newContractAddress = newContractInstance.options.address;
             if (isMainNetwork) {
                 statusText.innerHTML = 'Transaction  mined! Contract address: <a href="https://etherscan.io/token/' + newContractAddress + '" target="_blank">' + newContractAddress + '</a>'
-            } else if (isRopsten) {
-                statusText.innerHTML = 'Transaction  mined! Contract address: <a href="https://ropsten.etherscan.io/token/' + newContractAddress + '" target="_blank">' + newContractAddress + '</a>'
-            } else if (isRinkeby) {
-                statusText.innerHTML = 'Transaction  mined! Contract address: <a href="https://rinkeby.etherscan.io/token/' + newContractAddress + '" target="_blank">' + newContractAddress + '</a>'
-            } else if (isGoerli) {
-                statusText.innerHTML = 'Transaction  mined! Contract address: <a href="https://goerli.etherscan.io/token/' + newContractAddress + '" target="_blank">' + newContractAddress + '</a>'
+            } else if (isHpb) {
+                statusText.innerHTML = 'Transaction  mined! Contract address: <a href="https://hpbscan.org/HRC20/' + newContractAddress + '" target="_blank">' + newContractAddress + '</a>'
             } else
                 statusText.innerHTML = 'Contract deployed at address <b>' + newContractAddress + '</b> - keep a record of this.'
         }).catch(function (error) {
