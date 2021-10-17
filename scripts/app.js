@@ -661,12 +661,8 @@ assetForm.submit(function (e) {
             console.log('Transaction Hash :', transactionHash);
             if (isMainNetwork) {
                 statusText.innerHTML = '<p align="center">Contract deployment is in progress - please be patient. If nothing happens for a while check if there\'s any errors in the console (hit F12).<br> <strong>Transaction hash: </strong><br> <a href="https://etherscan.io/tx/' + transactionHash + '" target="_blank">' + transactionHash + '</a></p>'
-            } else if (isRopsten) {
-                statusText.innerHTML = '<p align="center">Contract deployment is in progress - please be patient. If nothing happens for a while check if there\'s any errors in the console (hit F12). <br> <strong>Transaction hash: </strong><br> <a href="https://ropsten.etherscan.io/tx/' + transactionHash + '" target="_blank">' + transactionHash + '</a></p>'
-            } else if (isRinkeby) {
-                statusText.innerHTML = '<p align="center">Contract deployment is in progress - please be patient. If nothing happens for a while check if there\'s any errors in the console (hit F12). <br> <strong> Transaction hash: </strong><br> <a href="https://rinkeby.etherscan.io/tx/' + transactionHash + '" target="_blank">' + transactionHash + '</a></p>'
-            } else if (isGoerli) {
-                statusText.innerHTML = '<p align="center">Contract deployment is in progress - please be patient. If nothing happens for a while check if there\'s any errors in the console (hit F12). <br> <strong> Transaction hash: </strong><br> <a href="https://goerli.etherscan.io/tx/' + transactionHash + '" target="_blank">' + transactionHash + '</a></p>'
+            } else if (isHpb) {
+                statusText.innerHTML = '<p align="center">Contract deployment is in progress - please be patient. If nothing happens for a while check if there\'s any errors in the console (hit F12). <br> <strong>Transaction hash: </strong><br> <a href="https://hpbscan.org/tx/' + transactionHash + '" target="_blank">' + transactionHash + '</a></p>'
             } else
                 statusText.innerHTML = 'Contract deployment is in progress - please be patient. If nothing happens for a while check if there\'s any errors in the console (hit F12). Transaction hash: ' + transactionHash
         }).on('confirmation', function () {
