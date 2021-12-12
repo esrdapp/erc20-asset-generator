@@ -1,19 +1,18 @@
 <!--
-  Title: ERC20 Asset Generator
-  Description: An ethereum ERC20 token generator, issue your own token on ethereum with just a few clicks.
-  Author: Sayed Tauseef Naqvi
-  Keywords: ethereum, ERC20, token, asset, web3js, MetaMask
+  Title: HRC20 Asset Generator
+  Description: A HPB HRC20 token generator, issue your own token on ethereum with just a few clicks.
+
   -->
-# ERC20 Asset/Token Generator
+# HRC20 Asset/Token Generator
 
 ![ERC20 Asset Generator Screenshot](https://i.imgur.com/ZZZP7PS.png)
 
 ## Demo
-[https://erc20-asset.ethorbit.com](https://erc20-asset.ethorbit.com)
+[https://hpbtokengen.com](https://hpbtokengen.com)
 
 ## Installation
 
-`git clone https://github.com/sthnaqvi/erc20-asset-generator.git`
+`git clone https://github.com/esrdapp/hrc20-token-generator.git`
 
 `npm install`
 
@@ -25,7 +24,5 @@ Make sure you have installed [MetaMask](https://chrome.google.com/webstore/detai
 Then visit http://localhost:4002 in your chrome browser after you npm start the asset generator.
 
 ## License
-
-The code in this branch is licensed under MIT (see [LICENSE file](https://github.com/sthnaqvi/erc20-asset-generator/blob/master/LICENSE))
 
 Feel free to modify or reuse the code here.
