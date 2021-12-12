@@ -5,7 +5,7 @@
   -->
 # HRC20 Asset/Token Generator
 
-![ERC20 Asset Generator Screenshot](https://i.imgur.com/ZZZP7PS.png)
+![ERC20 Asset Generator Screenshot](https://raw.githubusercontent.com/esrdapp/hrc20-token-generator/master/hpbtokengen_imgur.png)
 
 ## Demo
 [https://hpbtokengen.com](https://hpbtokengen.com)
